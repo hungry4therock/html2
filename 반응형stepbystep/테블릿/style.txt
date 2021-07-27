@@ -1,0 +1,59 @@
+@media (max-width:991px){
+    #header{width:100%;height:100px;}
+	.logo{
+		width:50%;height:100px;float:none;margin:0 auto;
+        text-align:center;
+	}
+    .login{display:none;}
+	.gnb_menu{
+		position:absolute;top:12px;left:12px;display:block;
+		width:40px;height:40px;
+		background:linear-gradient(#fff 50%,transparent 50%);
+		background-size:100% 10px;
+	}
+	nav{
+		z-index:1;display:none;position:fixed;
+		top:0;left:0;
+		width:100%;height:100%;
+		background-color:rgba(0,0,0,0.5);
+	}
+    .topBar{display:block;}
+    .btnClose{display:block;}
+	.menu{
+        width:340px;display:block;background-color:#fff;
+        float:left;
+    }
+	.menu>li{
+        width:100%;
+		text-align:left;color:#000;
+		position:relative;font-weight:bold;
+		border-bottom:1px solid #ddd;
+        text-indent:5%;
+	}
+	.submenu{
+		width:100%;text-align:left;position:relative;
+		z-index:99;border:none;
+		display:none;color:#fff;background-color:#506e8a;
+		font-size:0.9em;
+	}
+    .submenu>li{
+        list-style-type:square;list-style-position: inside;
+    }
+    .submenu>li:hover{
+        background-color:#ddd;color:#333;
+    }
+	#imgslide{
+		width:100%;height:350px;position:relative;overflow:hidden;
+	}
+    .imgs{width:100%;height:350px;position:relative;}
+	.imgs>img{
+		width:100%;height:100%;position:absolute;
+	}
+    .content{width:100%;}
+    .box{
+        width:45%;
+        margin-bottom:30px;border:1px solid #ddd;
+        background-color:#fff;
+    }
+    .footer{width:100%;}
+}

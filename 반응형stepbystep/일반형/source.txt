@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="http://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="script.js" defer="defer"></script>
+</head>
+<body>
+    <header>
+        <div id="header">
+            <div class="logo">느그고등학교</div>
+            <div class="login">홈&nbsp;&nbsp;&nbsp; 로그인&nbsp;&nbsp;&nbsp; 회원가입</div>
+        </div>
+    </header>
+    <nav>
+        <ul class="menu">           
+            <li>학교소개                
+                <ul class="submenu">
+                    <li>인사말</li>
+                    <li>교육목표</li>
+                    <li>학교상징</li>
+                    <li>학교연혁</li>
+                    <li>학교현황</li>
+                    <li>오시는길</li>
+                    <li>교직원현황</li>
+                </ul>
+            </li>
+            <li>교육활동
+                <ul class="submenu">
+                    <li>학사일정</li>
+                    <li>교육과정</li>
+                    <li>학교규정</li>
+                    <li>급식안내</li>
+                    <li>학교운동부</li>
+                    <li>방과후학교</li>
+                </ul>
+            </li>
+            <li>부산마당
+                <ul class="submenu">
+                    <li>학생회</li>
+                    <li>동아리</li>
+                    <li>봉사활동</li>
+                    <li>부산앨범</li>
+                    <li>학부모회</li>
+                    <li>학교운영위원회</li>
+                </ul>
+            </li>
+            <li>열린마당
+                <ul class="submenu">
+                    <li>공지사항</li>
+                    <li>가정통신문</li>
+                    <li>각종양식</li>
+                </ul>
+            </li>
+            <li>진로/위클래스
+                <ul class="submenu">
+                    <li>진로/진학정보</li>
+                    <li>드림레터</li>
+                    <li>상담실이용안내</li>
+                </ul>
+            </li>
+            <li>학교특색사업
+                <ul class="submenu">
+                    <li>스터디그룹</li>
+                    <li>탐구논문프로젝트</li>
+                    <li>국제교류활동</li>
+                    <li>활동사진</li>
+                    <li>부산방송통신고</li>
+                </ul>
+            </li>
+            <li>학교혁신
+                <ul class="submenu">
+                    <li>학교혁신</li>
+                </ul>
+            </li>
+            <li>학교재정공개
+                <ul class="submenu">
+                    <li>예결산현황</li>
+                </ul>
+            </li>
+            <li>시설개방민원
+                <ul class="submenu">
+                    <li>민원안내</li>
+                    <li>민원Q&A</li>
+                </ul>
+            </li>
+        </ul>        
+    </nav>
+    <div class="submenu_back"></div>
+    <div id="imgslide">
+        <div class="imgs">
+            <img src="images(1).jpg">
+        </div>
+    </div>
+    <div id="content">
+        <div class="content">
+            <div class="box">공지사항</div>
+            <div class="box">가정통신문</div>
+            <div class="box">포토앨범</div>
+            <div class="box">바로가기</div>
+            <div class="box">오늘의식단</div>
+            <div class="box">관련링크</div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">바닥글 영역</div>
+    </footer>
+</body>
+</html>
+
+
+
+style.css
+*{
+    margin:0 auto;padding:0;list-style:none;font-family:"맑은 고딕";
+}
+a{text-decoration:none;color:inherit;}
+header{width:100%;height:100px;background-color:#506e8a;
+    border-bottom:1px solid #aaa;
+}
+#header{
+    width:1080px;height:100px;
+}
+.logo{
+    width:200px;height:100px;float:left;line-height:100px;
+    color:#fff;font-weight:bold;font-size:1.4em;
+}
+.login{
+    width:300px;height:100px;float:right;line-height:100px;
+    color:#fff;font-weight:bold;text-align:right;font-size:0.9em;
+}
+nav{width:100%;height:50px;background-color:#506e8a;}
+
+.menu{
+    width:1080px;display:flex;
+}
+.menu>li{
+    width:120px;line-height:50px;text-align:center;
+    color:#fff;position:relative;
+}
+
+.submenu{
+    position:absolute;width:100%;
+    color:#333;
+    font-size:0.9em;
+    z-index:99;display:none;
+}
+.submenu>li{line-height:40px;}
+.submenu>li:hover{background-color:#506e8a;color:#fff;}
+.submenu_back{
+    width:100%;height:280px;z-index:1;position:absolute;
+    background-color:rgba(255,255,255,0.9);display:none;    
+}
+#imgslide{
+    width:100%;height:400px;position:relative;
+    background-color:#f3f3f3;border-bottom:1px solid #ddd;
+}
+.imgs{
+    width:1200px;height:400px;position:relative;
+}
+.imgs>img{
+    width:100%;height:100%;position:absolute;
+}
+#content{
+    width:100%;background-color:#f3f3f3;
+    
+}
+.content{
+    width:1200px;display:flex;flex-wrap:wrap;
+    padding-top:50px;padding-bottom:25px;
+}
+.box{
+    width:370px;height:300px;
+    margin-bottom:30px;border:1px solid #ddd;
+    background-color:#fff;
+}
+footer{
+    width:100%;height:150px;border-top:1px solid #ddd;
+}
+.footer{
+    width:1200px;height:150px;
+    font-size:0.9em;color:#666;
+}
+
+
+
+script.js
+$(".menu>li").mouseover(function(){
+        $(".submenu_back").stop().slideDown();
+        $(".submenu").stop().slideDown();        
+    
+})
+$(".menu>li").mouseleave(function(){    
+        $(".submenu_back").stop().slideUp();
+        $(".submenu").stop().slideUp();       
+ 
+})

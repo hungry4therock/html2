@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="http://code.jquery.com/jquery-1.12.3.min.js"></script>
+	<script>
+		$(function(){
+  $(document).mousedown(function( e ){
+    if( $("#menuLayer").is(":visible") ) {
+      $("#menuLayer").each(function(){
+        var l_position = $(this).offset();
+        l_position.right = parseInt(l_position.left) + ($(this).width());
+        l_position.bottom = parseInt(l_position.top) + parseInt($(this).height());
+
+        if( ( l_position.left <= e.pageX && e.pageX <= l_position.right )
+          && ( l_position.top <= e.pageY && e.pageY <= l_position.bottom ) ) {
+        } else {
+          $(this).hide();
+        }
+      });
+    }
+  });
+  
+  $("button").click(function(){
+    if( !$("#menuLayer").is(":visible") ) {
+      $("#menuLayer").show();
+    }
+  });
+});
+	</script>
+</head>
+<body>
+<button>레이어 보이기</button>
+<p></p>
+<div id="menuLayer" style="width:150px; height:250px; border:1px solid black;">레이어 바깥 아무데나 클릭하시면 사라집니다.</div>
+</body>
+</html>
